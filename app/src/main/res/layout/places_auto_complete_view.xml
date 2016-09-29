@@ -1,0 +1,113 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="42dp"
+   >
+
+        <TextView
+            android:id="@+id/Header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:text="||Search||"            
+            android:textColor="#FC5E09"
+            android:textSize="20dp"
+            android:textStyle="bold" 
+            android:visibility="gone"/>
+
+        <ImageButton
+            android:id="@+id/option_button"
+            android:layout_width="55dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/back_button"
+            android:layout_marginRight="23dp"
+            android:visibility="gone"/>
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="18dp"
+            android:layout_marginTop="3dp"/>
+
+    </RelativeLayout>
+     
+     <View
+         android:layout_width="match_parent"
+         android:layout_height="1dp"
+         android:layout_marginLeft="35dp"
+         android:layout_marginRight="35dp"
+         android:layout_marginTop="50dp"
+         android:background="#81F7F3" 
+         android:visibility="gone"/>
+      
+        <TextView
+            android:id="@+id/title_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="55dp"
+            android:background="#F9F4F3"
+            android:gravity="center"
+            android:text="Enter Place/city/zipcode Of Your Choice..."
+            android:textColor="#000000"
+            android:textSize="18dp"   
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:background="#81F7F3"
+             android:visibility="gone" />
+
+    <guide.placesAutocomplete.CustomAutoCompleteTextView
+        android:id="@+id/atv_places"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/view1"
+        android:layout_marginTop="100dp"
+        android:ems="10"
+        android:hint="Enter place/city/zipcode here..."
+        android:paddingLeft="15dp"
+        android:textColor="#000000"
+        android:textColorHint="#000000" />
+
+    <TextView
+        android:id="@+id/Lat_Long_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/atv_places"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="46dp"
+        android:text="hello"
+        android:textColor="@android:color/holo_red_dark" />
+
+    <Button
+        android:id="@+id/show_place_on_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Lat_Long_label"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="Show Place On Map"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>
